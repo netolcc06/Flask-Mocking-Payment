@@ -22,4 +22,6 @@ python run.py runserver
 TO BE COMPLETED: unit tests 
 TO BE ADDED: Docker
 
+The virtual environment (virtual env) directory used in this project is also included in this page. In case you want to use it, go to its Scripts directory and run activate.
+
 PS: https://github.com/moip is offline! (Couldn't get the hints ;p)
