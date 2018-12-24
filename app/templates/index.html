@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Payment</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static', filename="css/bootstrap.min.css")}}">
+  </head>
+  <body>
+    <h1>Shut up and take my money!!!</h1>
+    <div class="col-md-4 col-md-offset-4">
+    <form action="" method="post">
+      {{form.csrf_token}}
+      <div class="form-group">
+        <label for="">Name:</label>
+        {{form.name(_class="form-control", placeholder="Your name")}}
+        {% if form.errors.name%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.name}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">CPF:</label>
+        {{form.cpf(_class="form-control", placeholder="Your CPF (ONLY DIGITS)")}}
+        {% if form.errors.cpf%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.cpf}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">Email:</label>
+        {{form.email(_class="form-control", placeholder="Your email")}}
+        {% if form.errors.email%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.email}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">Payment Amount:</label>
+        {{form.payment_amount(_class="form-control", placeholder="How much are you going to pay?")}}
+        {% if form.errors.payment_amount%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.payment_amount}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">Payment Type:</label>
+        {{form.payment_type(_class="form-control", placeholder="Credit Card or boleto?")}}
+        {% if form.errors.payment_type%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.payment_type}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">Card holder name:</label>
+        {{form.card_holder_name(_class="form-control", placeholder="Your name as it appears in your card")}}
+        {% if form.errors.card_holder_name%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.card_holder_name}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">Card number:</label>
+        {{form.card_number(_class="form-control", placeholder="Your card number")}}
+        {% if form.errors.card_number%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.card_number}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">Card Expiration Date:</label>
+        {{form.card_expiration_date(_class="form-control", placeholder="mm/yyyy")}}
+        {% if form.errors.card_expiration_date%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.card_expiration_date}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="">Card CVV:</label>
+        {{form.card_cvv(_class="form-control", placeholder="CVV")}}
+        {% if form.errors.card_cvv%}
+        <div class="alert alert-danger" role="alert">
+            {{form.errors.card_cvv}}
+        </div>
+        {% endif %}
+      </div>
+      <button type="submit" name="button">Submit</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename="js/bootstrap.min.css")}}"></script type="text/javascript">
+  </body>
+</html>
