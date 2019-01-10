@@ -9,8 +9,6 @@ Payment contains a link to Card, which contains a link to Buyer, which contains 
 
 Tests were created in order to make the code robust, but these are not unit ones (task to be completed). All the inputs provided to the form are tested to guarantee that valid data will be inserted in the database. Also another test step is done before trying to insert the data, AFTER the form validation and BEFORE the actual insertion, so we can avoid the errors that arise from database unique and primary keys restrictions.
 
-Looking forward to hearing from you so I can realize how professional production-level code is architectured. ;)
-
 How to run:
 
 After requirements have been installed (check requirements.txt) run:
@@ -23,5 +21,3 @@ TO BE COMPLETED: unit tests
 TO BE ADDED: Docker
 
 The virtual environment (virtual env) directory used in this project is also included in this page. In case you want to use it, go to its Scripts directory and run activate.
-
-PS: https://github.com/moip is offline! (Couldn't get the hints ;p)
